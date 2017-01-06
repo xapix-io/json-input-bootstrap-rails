@@ -43,7 +43,7 @@ $(document).ready(function() {
     event.preventDefault()
     var values = []
     var pairs = {}
-    $.each(event.target.elements, function(index, value){values.push(event.target.elements[index].value)})
+    $.each(event.target.elements, function(index){values.push(event.target.elements[index].value)})
     values = values.filter(function(n){ return n != "" })
     for (var i=0; i<values.length; i = i+2) {
       pairs[values[i]] = values[i+1]
