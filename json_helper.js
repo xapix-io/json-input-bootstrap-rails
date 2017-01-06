@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var text_area = $("#text-area")
+  var text_area = $(".text-area")
   var modal = $("#modal")
   var cancel_button = $("#cancel-button")
   var save_button = $("#save-button")
@@ -11,6 +11,7 @@ $(document).ready(function() {
   //This is something to fix for gem
 
   text_area.click(function() {
+    json_form.attr("data", this.id)
     modal.css("display", "block")
   })
 
@@ -49,7 +50,11 @@ $(document).ready(function() {
       pairs[values[i]] = values[i+1]
     }
     var final = JSON.stringify(pairs)
-    text_area.val(final) //precludes more than one field per page
+    // var text_area_target = document.getElementById(this.attributes.data.value)
+    // var text_area_target = $(this).attributes.data.value
+    // var text_area_target = this.attributes.data.value
+    $('[id='+ this.attributes.data.value +']').val(final)
+    // text_area_target.val(final) //precludes more than one field per page
     modal.css("display", "none")
   })
 
