@@ -5,8 +5,10 @@ $(document).ready(function() {
   var cancel_button = $("#cancel-button")
   var save_button = $("#save-button")
   var add_row_button = $("#add-row")
-  var json_rows = $("#json-rows")
   var json_form = $("#json-form")
+
+  //Use of ids instead of classes precludes more than one text area using JSON-helper per page.
+  //This is something to fix for gem
 
   text_area.click(function() {
     modal.css("display", "block")
@@ -17,7 +19,7 @@ $(document).ready(function() {
   })
 
   add_row_button.click(function(){
-    $("#json-rows form").append(`<div class="row json-row">
+    $("#json-form").append(`<div class="row json-row">
       <div class="key-field col-xs-5">
         <input class="key-data form-control">
       </div>
@@ -33,7 +35,7 @@ $(document).ready(function() {
     </div>`);
   });
 
-  json_rows.on('click','.delete-button',function() {
+  json_form.on('click','.delete-button',function() {
     this.parentElement.parentElement.remove()
   });
 
@@ -47,7 +49,7 @@ $(document).ready(function() {
       pairs[values[i]] = values[i+1]
     }
     var final = JSON.stringify(pairs)
-    text_area.val(final)
+    text_area.val(final) //precludes more than one field per page
     modal.css("display", "none")
   })
 
