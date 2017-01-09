@@ -7,9 +7,6 @@ $(document).ready(function() {
   var add_row_button = $("#add-row")
   var json_form = $("#json-form")
 
-  //Use of ids instead of classes precludes more than one text area using JSON-helper per page.
-  //This is something to fix for gem
-
   text_area.click(function() {
     json_form.attr("data", this.id)
     modal.css("display", "block")
