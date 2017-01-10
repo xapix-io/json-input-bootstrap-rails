@@ -26,19 +26,18 @@ This gem will add Javascript and CSS to a rails project to let JSONified text ge
 
 The functionality is very basic right now, as this is really just meant as a handy shortcut if you need, for example, payload params in a POST request to be quickly converted to JSON.
 
-### Contetnts
+### Contents
 
 There are four files in this package, including this README.
 
 The others are:
 
 #### sample.html
-This file has sample html, including two text areas and the modal in which the helper form resides. Things to note in this file are that:
+This file has a sample html file which includes two text areas with the proper class for the javascript/css to work. Things to note in this file are that:
 
-1. Each text area has an ID attribute. This is required so that the helper knows where to put your stringified JSON when you click save. It'll add the final output JSON to the textarea with the ID in which you clicked to open the modal. The ID can be anything you like--there is no required convention for this part.
-2. Each text area that you want to trigger JSON-helper needs to have a class of "json-helper".
-
-It is suggested you borrow the modal code directly, but if you want to modify it and/or make your own, be wary of the way IDs and classes are used in the CSS and JS files so that the event listeners still get triggered.
+1. When the page loads, a custom modal is appended to the end of the body section. It's unlikely, but if your IDs/classes match the names of stuff in this modal, it'll stop working.
+2. Each text area has an ID attribute. This is required so that the script knows where to put your stringified JSON when you click save. It'll add the final output JSON to the textarea with the ID in which you clicked to open the modal. The ID can be anything you like--there is no required convention for this part--it just needs to be there.
+3. Each text area that you want to trigger the script for needs to have a class of "json-input-bootstrap-rails".
 
 #### json_input_bootstrap_rails.css
 This file has the CSS to style elements of the modal. Feel free to edit the style as you like, just be careful about renaming the pre-given non-bootstrap classes, as they might mess with the Javascript if you change them.
@@ -46,14 +45,14 @@ This file has the CSS to style elements of the modal. Feel free to edit the styl
 Also, there are some Twitter Bootstrap classes included too, so if you're using that you've got extra built-in styling shortcuts. These are discardable/changeable if you like.
 
 #### json_input_bootstrap_rails.js
-This is where all the javascript lives, including functions to open the modal upon clicking in a text area you want JSONified, adding and deleting rows from the form, and the conversion upon hitting the save button.
+This is where all the javascript lives, including functions to append the modal upon document ready and opening it when you click in a textarea you want JSONified, adding and deleting rows from the form, and the conversion upon hitting the save button.
 
 ## Don't change these classes!
 
 These are the classes and IDs you need to make the Javascript (as currently written) work:
 
-1. Textareas: must have an ID (of anything you want to name it) and a class of "text-area"
-2. Modal: must have an ID of "modal"
+1. Textareas: must have an ID (of anything you want to name it) and a class of "json-input-bootstrap-rails"
+2. Modal: must have an ID of "json-input-modal"
 3. Button to add a row in the form: ID of "add-row"
 4. Delete a row button (looks like an 'X'): class of "delete-button"
 5. Cancel button (just closes/hides the modal): ID of "cancel-button"

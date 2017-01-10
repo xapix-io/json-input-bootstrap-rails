@@ -1,7 +1,32 @@
 $(document).ready(function() {
 
+  $("body").append(`<div id="json-input-modal" class="modal-dialog modal-lg">
+    <div id="json-input-modal-content" class="modal-content">
+      <form id="json-form">
+        <div id="json-rows">
+          <div class="row json-header-row">
+            <div class="key-label col-xs-5">
+              <span>KEY</span>
+            </div>
+            <div class="colon-label col-xs-1">
+              <span>:</span>
+            </div>
+            <div class="value-label col-xs-5">
+              <span>VALUE</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="save-button" type="submit" class="btn btn-success">Save</button>
+          <button id="cancel-button" type="button" class="btn btn-success">Cancel</button>
+          <button id="add-row" type="button" class="btn btn-success">Add a Row</button>
+        </div>
+      </form>
+    </div>
+  </div>`)
+
   var text_area = $(".json-input-bootstrap-rails")
-  var modal = $("#modal")
+  var modal = $("#json-input-modal")
   var cancel_button = $("#cancel-button")
   var save_button = $("#save-button")
   var add_row_button = $("#add-row")

@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'json-input-bootstrap-rails/version'
+require 'json_input_bootstrap_rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "json-input-bootstrap-rails"
-  spec.version       = JsonHelper::VERSION
+  spec.name          = "json_input_bootstrap_rails"
+  spec.version       = JsonInputBootstrapRails::VERSION
   spec.authors       = ["Dave Wexler"]
   spec.email         = ["dave@xapix.io", "oliver@xapix.io"]
   spec.license       = 'MIT'
