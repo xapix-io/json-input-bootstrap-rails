@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var text_area = $(".json-helper")
+  var text_area = $(".json-input-bootstrap-rails")
   var modal = $("#modal")
   var cancel_button = $("#cancel-button")
   var save_button = $("#save-button")

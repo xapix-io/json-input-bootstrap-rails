@@ -1,11 +1,11 @@
-# json-input-bootstrap-rails
+# JsonHelper
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'json_helper'
+gem 'json_input_bootstrap_rails'
 ```
 
 And then execute:
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install json_helper
+    $ gem install json_input_bootstrap_rails
 
 ## Usage
 
@@ -28,7 +28,7 @@ The functionality is very basic right now, as this is really just meant as a han
 
 ### Contetnts
 
-There are four files in this package, including this README.
+There are four important files in this package, including this README.
 
 The others are:
 
@@ -40,12 +40,12 @@ This file has sample html, including two text areas and the modal in which the h
 
 It is suggested you borrow the modal code directly, but if you want to modify it and/or make your own, be wary of the way IDs and classes are used in the CSS and JS files so that the event listeners still get triggered.
 
-#### json_helper.css
+#### json_input_bootstrap_rails.css
 This file has the CSS to style elements of the modal. Feel free to edit the style as you like, just be careful about renaming the pre-given non-bootstrap classes, as they might mess with the Javascript if you change them.
 
 Also, there are some Twitter Bootstrap classes included too, so if you're using that you've got extra built-in styling shortcuts. These are discardable/changeable if you like.
 
-#### json_helper.js
+#### json_input_bootstrap_rails.js
 This is where all the javascript lives, including functions to open the modal upon clicking in a text area you want JSONified, adding and deleting rows from the form, and the conversion upon hitting the save button.
 
 ## Don't change these classes!
@@ -70,4 +70,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/json_helper.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/json_input_bootstrap_rails.
