@@ -7,10 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "json-input-bootstrap-rails"
   spec.version       = JsonHelper::VERSION
   spec.authors       = ["Dave Wexler"]
+  spec.email         = ["dave@xapix.io", "oliver@xapix.io"]
   spec.license       = 'MIT'
   spec.summary       = %q{A gem that takes form entries in key-value form and converts to a JSON string.}
   spec.description   = %q{A gem that will pop up a modal with a form when you click on a textarea in which you want a stringified JSON object. Simply fill in the form's keys and values and click save, and it will populate the corresponding textarea with a stringified JSON object. Ideal for quick preparation of JSON payload params for POST requests.}
-  spec.homepage      = "https://github.com/DaveWexler/json-helper."
+  spec.homepage      = "https://github.com/xapix-io/json-input-bootstrap-rails"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
