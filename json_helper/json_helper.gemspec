@@ -7,8 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "json_helper"
   spec.version       = JsonHelper::VERSION
   spec.authors       = ["Dave Wexler"]
-  spec.email         = ["dwexler@gmail.com"]
-  spec.license       = ['MIT']
+  spec.license       = 'MIT'
   spec.summary       = %q{A gem that takes form entries in key-value form and converts to a JSON string.}
   spec.description   = %q{A gem that will pop up a modal with a form when you click on a textarea in which you want a stringified JSON object. Simply fill in the form's keys and values and click save, and it will populate the corresponding textarea with a stringified JSON object. Ideal for quick preparation of JSON payload params for POST requests.}
   spec.homepage      = "https://github.com/DaveWexler/json-helper."

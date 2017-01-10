@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>JSON-Helper</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="json_helper.css">
+    <link rel="stylesheet" href="./assets/stylesheets/json_helper.css">
   </head>
   <body>
     <h2>Sample JSON Payload</h2>
@@ -19,52 +19,52 @@
           <label class="control-label">Text Area 2</label>
           <textarea id="text-area-2" class="json-helper form-control"></textarea>
 
-          <div id="modal" class="modal-dialog modal-lg">
-            <div id="modal-content" class="modal-content">
-              <div id="json-rows">
-                <form id="json-form">
-                <div class="row">
-                  <div class="json-header-row">
-                    <div class="key-label col-xs-5">
-                      <span>KEY</span>
-                    </div>
-                    <div class="colon-label col-xs-1">
-                      <span>:</span>
-                    </div>
-                    <div class="value-label col-xs-5">
-                      <span>VALUE</span>
-                    </div>
+
+        </div>
+      </div>
+      <div id="modal" class="modal-dialog modal-lg">
+        <div id="modal-content" class="modal-content">
+          <div id="json-rows">
+            <form id="json-form">
+              <div class="row">
+                <div class="json-header-row">
+                  <div class="key-label col-xs-5">
+                    <span>KEY</span>
                   </div>
-                </div>
-                <div class="row json-row">
-                  <div class="key-field col-xs-5">
-                    <input class="form-control">
-                  </div>
-                  <div class="colon-holder col-xs-1">
+                  <div class="colon-label col-xs-1">
                     <span>:</span>
                   </div>
-                  <div class="value-field col-xs-5">
-                    <input class="form-control">
-                  </div>
-                  <div class="delete-area col-xs-1">
-                    <button class="delete-button btn" type="button">X</button>
+                  <div class="value-label col-xs-5">
+                    <span>VALUE</span>
                   </div>
                 </div>
               </div>
-              <div class="modal-footer">
-                <button id="save-button" type="submit" class="btn btn-success">Save</button>
-                <button id="cancel-button" type="button" class="btn btn-success">Cancel</button>
-                <button id="add-row" type="button" class="btn btn-success">Add a Row</button>
+              <div class="row json-row">
+                <div class="key-field col-xs-5">
+                  <input class="form-control">
+                </div>
+                <div class="colon-holder col-xs-1">
+                  <span>:</span>
+                </div>
+                <div class="value-field col-xs-5">
+                  <input class="form-control">
+                </div>
+                <div class="delete-area col-xs-1">
+                  <button class="delete-button btn" type="button">X</button>
+                </div>
               </div>
-            </form>
             </div>
-          </div>
-
+            <div class="modal-footer">
+              <button id="save-button" type="submit" class="btn btn-success">Save</button>
+              <button id="cancel-button" type="button" class="btn btn-success">Cancel</button>
+              <button id="add-row" type="button" class="btn btn-success">Add a Row</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
 
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="json_helper.js"></script>
+  <script src="./assets/javascripts/json_helper.js"></script>
 </html>
