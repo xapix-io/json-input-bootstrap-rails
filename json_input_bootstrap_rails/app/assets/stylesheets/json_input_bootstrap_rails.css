@@ -1,4 +1,4 @@
-#json-input-modal label {
+#json-input-modal label, #json-input-modal .colon-field {
   text-align: center;
 }
 
