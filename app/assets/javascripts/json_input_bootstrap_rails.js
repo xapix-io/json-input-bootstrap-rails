@@ -52,13 +52,16 @@ $(document).ready(function() {
 
     $(document).on('hidden.bs.modal', '#json-input-modal', function () {
       var values = [];
-      var pairs = {};
-      $("#json-form input").each(function(index, data){ values.push($(this).val()) });
-      values = values.filter(function(n){ return n != "" });
-      for (var i=0; i < values.length; i = i+2) {
-        pairs[values[i]] = values[i+1];
+      var pairs = [];
+      var json_object = {};
+
+      $("#json-form input").each(function(index, data){ values.push($(this).val()); });
+      for (var i=0; i < values.length; i = i+2) { pairs.push([values[i], values[i+1]]); }
+      pairs = pairs.filter(function(pair){ return pair[0] !== ""; });
+      for (var i=0; i < pairs.length; i = i+1) {
+        json_object[pairs[i][0]] = pairs[i][1];
       }
-      var json = JSON.stringify(pairs);
+      var json = JSON.stringify(json_object);
       $('[id='+ json_form.attr("data") +']').val(json);
       modal.modal('hide');
     })
